@@ -4,7 +4,7 @@ import numpy as np
 import json
 from config import *
 
-embeddings_json= "knowledge_pool/brutalism_wikipedia.json"
+embeddings_json= "knowledge_pool/LEED_Certification_Guidebook_March_2011.json"
 
 # Choose between "local" or "openai" mode
 mode = "local" # or "local"
@@ -13,9 +13,9 @@ client, completion_model = api_mode(mode)
 # question = "What is the program for the building?"
 # question = "What is the place like?"
 # question = "Is there any mention of the construction materials that should be used?"
-question = "What are the names of the most famous brutalist buildings?"
+question = "generate a prompt to visualise a LEED building ?"
 
-num_results = 1 #how many vectors to retrieve
+num_results = 10 #how many vectors to retrieve
 
 
 def get_embedding(text, model=embedding_model):
